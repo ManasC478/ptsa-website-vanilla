@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+:root {
+  --nav-link-color: #fff;
+  --primary-color: rgb(166, 0, 0);
+  --nav-links-font-family: "Oswald", sans-serif;
+  --text-font-family: "acumin-pro-semi-condensed", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: black;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+.ptsa-website {
+  min-height: 100vh;
+}
+
+.home,
+.job-shadow,
+.about-us,
+.cancel,
+.thanks {
+  padding: 40px;
+  font-family: var(--text-font-family);
+  padding-bottom: 16px;
+  line-height: 22px;
+}
+
+.cancel h1,
+.thanks h1 {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-family: var(--text-font-family);
+}
+
+@media (min-width: 1300px) {
+  .secondary-nav,
+  .primary-nav,
+  .home,
+  .job-shadow,
+  .about-us,
+  .cancel,
+  .thanks {
+    width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .home,
+  .job-shadow,
+  .about-us,
+  .cancel,
+  .thanks {
+    padding: 40px 5px;
+    padding-bottom: 16px;
+  }
+}
+
+/* navigation component */
+.primary-nav,
+.secondary-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-nav {
+  height: 100px;
+  padding: 10px 40px;
+}
+
+.primary-nav-img {
+  height: 100%;
+}
+
+.secondary-nav-container {
+  background: var(--primary-color);
+}
+
+.secondary-nav,
+.secondary-nav-stacked {
+  padding: 15px 40px;
+}
+
+.secondary-nav a,
+.secondary-nav-stacked a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-family: var(--text-font-family);
+}
+
+.secondary-nav-links,
+.secondary-nav-socialmedia-links,
+.drop-down-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.secondary-nav-links li {
+  font-size: 18px;
+}
+
+.secondary-nav-socialmedia-links li {
+  font-size: 12px;
+}
+
+.nav-divider {
+  border: 0.5px solid var(--nav-link-color);
+  height: 20px;
+  margin: 0 10px;
+}
+
+.nav-divider-small {
+  border: 0.1px solid var(--nav-link-color);
+  height: 15px;
+  margin: 0 5px;
+}
+
+.secondary-nav-stacked {
+  background: var(--primary-color);
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
+
+.secondary-nav-stacked button {
+  background: transparent;
+  color: var(--nav-link-color);
+}
+
+.drop-down-links {
+  display: block;
+  background: rgba(166, 0, 0, 0.9);
+  transition: 0.5s ease;
+  padding: 20px 20px;
+  text-align: left;
+  position: absolute;
+  top: 100%;
+  width: 100vw;
+  z-index: 3;
+}
+
+.drop-down-links li {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.drop-down-links hr {
+  margin: 10px;
+  width: 100%;
+}
+
+.nav-social-media {
+  display: flex;
+}
+
+.nav-social-media a {
+  margin-right: 10px;
+  font-size: 34px;
+}
+
+@media (max-width: 500px) {
+  .primary-nav-img {
+    height: 50%;
+  }
+}
+
+/* home page */
+.home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ptsa-support-join p {
+  margin: 15px 0;
+}
+
+.donate {
+  border-collapse: collapse;
+  margin-top: 40px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.donate th,
+.donate td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.donate input {
+  width: 100%;
+}
+
+.donate span {
+  display: block;
+}
+
+.donate img {
+  width: 100%;
+}
+
+.home-divider {
+  border: 1px solid grey;
+  margin: 20px;
+}
+
+.announcements {
+  width: 700px;
+  text-align: center;
+}
+
+.announcements-list {
+  list-style-type: none;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.announcements-list li {
+  margin: 10px 0;
+}
+
+@media (max-width: 800px) {
+  .home {
+    flex-direction: column-reverse;
+  }
+
+  .announcements {
+    width: 100%;
+  }
+}
+
+/* about us page */
+.about-us h1 {
+  color: var(--primary-color);
+}
+
+.about-us p {
+  margin: 15px 0;
+}
+
+.about-us a {
+  color: black;
+}
+
+/* job shadow pages */
+.job-shadow {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.job-shadow-sidebar {
+  border-right: 1px solid grey;
+}
+
+.job-shadow-sidebar a {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.job-shadow-overview,
+.explore-jobs,
+.shadow-day,
+.forms,
+.contact-us,
+.student-registration,
+.host-registration {
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.job-shadow-overview h2 {
+  margin-bottom: 5px;
+}
+
+.typical-day-list,
+.shadow-day-list {
+  padding: 0 40px;
+}
+
+.job-opportunities {
+  border-collapse: collapse;
+}
+
+.job-opportunities th,
+.job-opportunities td {
+  border: 1px solid #9e9e9e;
+  padding: 10px;
+}
+
+.job-opportunities th {
+  background: #1c4587ff;
+  color: white;
+}
+
+.host-registration,
+.student-registration {
+  position: relative;
+}
+
+.host-registration iframe,
+.student-registration iframe {
+  display: block;
+  width: 100%;
+  height: 700px;
+  border: none;
+  position: relative;
+  z-index: 0;
+}
+
+#open-form-new-window {
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .job-shadow {
+    display: block;
+  }
+
+  .job-shadow-sidebar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border-right: 7px solid var(--primary-color);
+    border-radius: 0 5px 5px 0;
+  }
+
+  .job-shadow-sidebar a {
+    margin: 10px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .job-shadow-overview,
+  .explore-jobs,
+  .shadow-day,
+  .forms,
+  .contact-us,
+  .student-registration,
+  .host-registration {
+    padding: 0;
+  }
+
+  .job-opportunities th,
+  .job-opportunities td {
+    padding: 5px;
+  }
+}
