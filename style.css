@@ -76,7 +76,7 @@ a:focus {
   .about-us,
   .cancel,
   .thanks {
-    padding: 40px 5px;
+    padding: 40px 15px;
     padding-bottom: 16px;
   }
 }
